@@ -270,7 +270,7 @@ const totalEarned = Math.min(earnedTasks + submissionMarks, 100);
 
 /** Build summary */
 const now = new Date().toISOString();
-let summary = `# Lab 2 – Autograding Summary
+let summary = `# Lab | 3.1 CSS Basics | Autograding Summary
 
 - Student: \`${studentId}\`
 - ${cssLoadNote}
@@ -322,7 +322,7 @@ if (process.env.GITHUB_STEP_SUMMARY) {
 
 fs.mkdirSync(ARTIFACTS_DIR, { recursive: true });
 
-const csv = `student,score,max_score,status
+const csv = `student_username,obtained_marks,total_marks,status
 ${studentId},${totalEarned},100,${status}
 `;
 
